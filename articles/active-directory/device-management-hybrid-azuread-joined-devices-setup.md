@@ -31,7 +31,7 @@ Before you start configuring hybrid Azure AD joined devices in your environment,
 
 If you are relying on the [System Preparation Tool (Sysprep)](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-vista/cc721940(v=ws.10)), please make sure you create images from an installation of Windows that has not been yet registered with Azure AD.
 
-All domain-joined devices running Windows 10 Anniversary Update and Windows Server 2016 automatically register with Azure AD at device restart or user sign-in once the configuration steps mentioned below are complete. If this automatic register behavior is not preferred or if a controlled rollout is desired, please follow instructions in the Control Deployment and Rollout section below first to selectively enable or disable automatic rollout before following the other configuration steps.  
+All domain-joined devices running Windows 10 Anniversary Update and Windows Server 2016 automatically register with Azure AD at device restart or user sign-in once the configuration steps mentioned below are complete. If this automatic register behavior is not preferred or if a controlled rollout is desired, please follow instructions in the **step 4: Control Deployment and Rollout** section below first to selectively enable or disable automatic rollout before following the other configuration steps.  
 
 To improve the readability of the descriptions, this topic uses the following term: 
 
@@ -54,8 +54,6 @@ To improve the readability of the descriptions, this topic uses the following te
     - Windows Server 2008 R2
 - The registration of Windows down-level devices **is** supported in non-federated environments through Seamless Single Sign On [Azure Active Directory Seamless Single Sign-On](https://aka.ms/hybrid/sso).
 - The registration of Windows down-level devices **is not** supported for devices using roaming profiles. If you are relying on roaming of profiles or settings, use Windows 10.
-
-
 
 ## Prerequisites
 
@@ -539,7 +537,7 @@ When you have completed the required steps, domain-joined devices are ready to a
 
 ### Remarks
 
-- You can use a Group Policy object to control the rollout of automatic registration of Windows 10 and Windows Server 2016 domain-joined computers.
+- You can use a Group Policy object to control the rollout of automatic registration of Windows 10 and Windows Server 2016 domain-joined computers. If you do not want these devices to automatically register, you should disable the automatic registration in group policy and roll it out to your on-premises AD domain joined devices first. Then selectively enable the automatic registration in group policy for specific devices that you want to automatically register.
 
 - Windows 10 November 2015 Update automatically joins with Azure AD **only** if the rollout Group Policy object is set.
 
