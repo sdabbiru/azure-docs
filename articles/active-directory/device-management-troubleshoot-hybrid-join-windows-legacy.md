@@ -20,7 +20,7 @@ ms.reviewer: jairoc
 # Troubleshooting hybrid Azure Active Directory joined down-level devices 
 
 This article is applicable only to the following devices: 
-
+ or 
 - Windows 7 
 - Windows 8.1 
 - Windows Server 2008 R2 
@@ -87,7 +87,7 @@ If the hybrid Azure AD join was not successful, the dialog box provides you with
     
     - Autoworkplace.exe is unable to silently authenticate with Azure AD or AD FS. This could be due to an out-bound network connectivity issues to the Azure AD URLs (check the prerequisites). It could also be that multi-factor authentication (MFA) is enabled/configured for the user and WIAORMUTLIAUTHN is not configured at the federation server (check configuration steps). Another possibility is that home realm discovery (HRD) page is waiting for user interaction, which prevents **autoworkplace.exe** from silently obtaining a token.
     
-    - Your organization uses Azure AD Seamless Single Sign-On, `https://autologon.microsoftazuread-sso.com` is not present on the device's IE intranet settings, and **Allow updates to status bar via script** is not enabled for the Intranet zone.
+    - Your organization uses Azure AD Seamless Single Sign-On, `https://autologon.microsoftazuread-sso.com` or `https://aadg.windows.net.nsatc.net` are not present on the device's IE intranet settings, and **Allow updates to status bar via script** is not enabled for the Intranet zone.
 
 - A quota has been reached
 
