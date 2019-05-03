@@ -155,6 +155,21 @@ If the values are **NO**, it could be due:
 
 - HTTP Proxy not found
 
+## Improvements in 1809
+
+There is a new diagnostics support added to dsregcmd /status starting in Windows 10 version 1809 onwards. The new output will look like this:
++----------------------------------------------------------------------+
+     Previous Registration : 2019-01-31 09:16:43.000 UTC
+         Registration Type : sync
+               Error Phase : join
+          Client ErrorCode : 0x801c03f2
+          Server ErrorCode : DirectoryError
+            Server Message : The device object by the given id (e92325d0-7ac4-4714-88a1-94ae875d5245) is not found.
+              Https Status : 400
+                Request Id : 6bff0bd9-820b-484b-ab20-2a4f7b76c58e
++----------------------------------------------------------------------+
+
+
 ## Next steps
 
 For questions, see the [device management FAQ](faq.md) 
